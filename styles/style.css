@@ -1,0 +1,262 @@
+body,html {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #F2F2F2;
+    height: 100%;
+}
+
+
+/*////ENCABEZADO////*/
+
+header {
+    overflow: hidden;
+    background: rgb(1,3,38);
+    background: linear-gradient(73deg, rgba(1,3,38,1) 0%, rgba(4,157,191,1) 63%, rgba(242,210,114,1) 100%);
+	padding: 20px 10px;
+    height: 80px;
+}
+
+.logoImg {
+    height: 20%;
+    width: auto;
+    float: left;
+    position: relative;
+    top: .5em;
+}
+
+.logoTexto {
+    float: left;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav {
+	float: right;
+}
+
+.navLink {
+    display: inline;
+    position: relative;
+    top: 1.5em;
+    margin-left: 2px;
+}
+
+.navLink a {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #010326;
+    padding: 5px;
+}
+
+.navLink a:hover {
+    background-color: #0103265d;
+    color: #F2F2F2;
+    transition: .5s;
+    border-radius: 8px;
+}
+
+#activo {
+    border: 2px solid #010326;
+    border-radius: 10px ;
+}
+
+/*////HERO ////*/
+
+.heroImg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(1, 6, 24, 0.861)), url("../assets/seguros2.jpg");
+    height: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.heroTexto {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heroTexto h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+    color: #ffffff;
+}
+
+.heroTexto p {
+    color: aliceblue;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+/*////principal, formulario////*/
+
+
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.containerPrincipal{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 15px;    
+}
+
+.formulario {
+    padding: 35px;
+    width: 40%; 
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px rgb(199, 199, 199);
+}
+
+.campo label, .campo input, .campo select {
+    display: block;
+	font-size: 18px;
+	margin: 0 0 10px;
+}
+
+.campo input {
+    display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 85%;
+}
+
+.enviar{
+	padding: 15px 20px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #F25C05;
+	border: 3px solid #F25C05;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 15px 0;
+}
+
+.enviar:hover {
+    background-color: #F25C05;
+    color: #ffffff;
+    transition: .7s;
+}
+
+.enviar:active {   
+    transform: scale(0.98);
+}
+
+#planSeleccionado {
+    align-self: flex-end;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.planImg {
+    width: 40%;
+    height: auto;
+}
+
+/*////FOOTER////*/
+
+footer {
+    background-color:#010326;
+    color: aliceblue;
+    margin-top: 25px;
+    padding: 30px;
+    text-align: center;
+}
+
+footer a {
+    color: #049DBF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #F2D272;
+}
+
+
+/*/////CONFIG RESPONSIVE//////*/
+
+@media(max-width: 769px){
+
+    .containerPrincipal , header{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header {
+        height: auto;
+        padding: 10px;
+    }
+
+    header a {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .logoImg {
+        position: initial;
+        width: 30vh;
+        float: none;
+    }
+
+    nav {
+        float: none;
+        margin-bottom: 15px;
+    }
+
+    .navLink {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        float: none;
+    }
+
+    .navLink a {
+        display: block;
+        color: #F2F2F2;
+        width: auto;
+        text-align: center;
+    }
+
+    .navLink a:hover {
+        transition: .5s;
+        font-weight: bold;
+    }
+
+    #activo {
+        border: 2px solid #f2f2f2;
+        border-radius: 10px ;
+    }
+
+    .formulario {
+        padding: 15px;
+        width: 90%;
+    }
+
+    #planSeleccionado {
+        margin-top: 20px;
+        align-self: auto;
+    }
+}
+    

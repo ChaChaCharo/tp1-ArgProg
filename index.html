@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Seguro No Pagamos Cooperativa</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/logo4.png"/>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+   
+    <header>
+        <div class="containerHeader">
+            <a href="#">
+                <img class="logoImg" src="assets/logo.svg" alt="Logo de Seguro No pagamos Cooperativa">
+            </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="navLink"><a href="#">Inicio</a></li>
+                    <li class="navLink"><a href="#">Seguros</a></li>
+                    <li class="navLink"><a href="#">Nosotros</a></li>
+                    <li class="navLink"><a id="activo" href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="heroImg">
+        <div class="heroTexto">
+            <h1>¡Contactanos!</h1>
+            <p>¿Interesado en nuestros seguros? ¿Te gustaría saber qué plan es el indicado para vos? Solicitá una asesoría con uno de nuestros representantes para poder aclarar todas tus dudas.</p>
+        </div>
+    </section>
+
+    <section class = "containerPrincipal">
+        <form class="formulario">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+                
+            <div class="campo">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" required>
+            </div>
+                
+            <div class="campo">
+                <label for="dni">DNI</label>
+                <input type="text" name="dni" id="dni" required>
+            </div>
+                
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+                
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" required>
+            </div>
+    
+            <div class="campo">
+                <label for="tipoSeguro">Tipo de Seguro</label>
+                <select name="tipoSeguro" id="tipoSeguro" onchange="mostrarTipoSeguro()" required>
+                    <option value="">--Seleccione un plan de seguros--</option>
+                    <option value="0">Básico</option>
+                    <option value="1">Intermedio</option>
+                    <option value="2">Premium</option>
+                </select>
+            </div>
+            <input type="submit" class="enviar" value="Solicitar Consulta">
+        </form>
+        
+        <div class="formulario" id="planSeleccionado"></div>
+            
+    </section>
+    
+</body>
+
+<footer>
+    <small>Seguro No Pagamos Cooperativa 2023 | para <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank" >Argentina Programa 4.0</a></small>
+</footer>
+
+<script src="script.js"></script>
+
+</html>
