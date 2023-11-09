@@ -25,18 +25,6 @@ header {
     top: .5em;
 }
 
-.logoTexto {
-    float: left;
-    color: white;
-    text-align: left;
-    padding: 12px;
-    text-decoration: none;
-    line-height: 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-}
-
 nav {
 	float: right;
 }
@@ -105,8 +93,6 @@ nav {
 
 /*////principal, formulario////*/
 
-
-
 h1 {
     font-family: 'Quicksand', sans-serif;
     font-size: 35px;
@@ -133,11 +119,15 @@ h1 {
 	margin: 0 0 10px;
 }
 
-.campo input {
+.campo input , #tipoSeguro{
     display: block;
 	margin: 0 0 20px;
 	padding: 10px 25px;
 	width: 85%;
+}
+
+#tipoSeguro {
+    position: relative; 
 }
 
 .enviar{
@@ -148,7 +138,6 @@ h1 {
 	border: 3px solid #F25C05;
 	border-radius: 10px;
 	cursor: pointer;
-	margin: 15px 0;
 }
 
 .enviar:hover {
@@ -162,14 +151,37 @@ h1 {
 }
 
 #planSeleccionado {
+    font-size: .8em;
     align-self: flex-end;
     transition: opacity 1s;
     opacity: 0;
 }
+.planNombre {
+    color: #F25C05;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.valorPlan {
+    color: #049DBF;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.valorPlan strong {
+    color: #049DBF;
+    font-weight: 700;
+}
+
+.valorPlan, .planNombre {
+    margin: 5px 0;
+}
 
 .planImg {
-    width: 40%;
+    width: 45%;
     height: auto;
+    float: right;
+    margin: 0 10px 5px 0;
 }
 
 /*////FOOTER////*/
@@ -180,6 +192,16 @@ footer {
     margin-top: 25px;
     padding: 30px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    display: inline;
+    font-size: .6em;
+    padding: 0 15px;
+    
 }
 
 footer a {
@@ -189,23 +211,25 @@ footer a {
 
 footer a:hover {
     color: #F2D272;
+    transition: .5s;
 }
+
 
 
 /*/////CONFIG RESPONSIVE//////*/
 
 @media(max-width: 769px){
 
-    .containerPrincipal , header{
+    .containerPrincipal , header, .formulario, .campo, #formulario{
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     header {
         height: auto;
-        padding: 10px;
+        padding: 10px 0;
     }
 
     header a {
@@ -216,13 +240,14 @@ footer a:hover {
 
     .logoImg {
         position: initial;
-        width: 30vh;
+        width: 50vmax;
         float: none;
+        margin-top: 15px;
     }
 
     nav {
         float: none;
-        margin-bottom: 15px;
+        margin-bottom: 35px;
     }
 
     .navLink {
@@ -230,6 +255,9 @@ footer a:hover {
         flex-direction: column;
         flex-wrap: wrap;
         float: none;
+        border-bottom: 1px solid #f2f2f2;
+        border-radius: 0%;
+        padding: 15px;
     }
 
     .navLink a {
@@ -237,26 +265,67 @@ footer a:hover {
         color: #F2F2F2;
         width: auto;
         text-align: center;
+        font-size: 1.1em;
     }
 
     .navLink a:hover {
         transition: .5s;
         font-weight: bold;
+        background-color: #00000000;
     }
 
     #activo {
-        border: 2px solid #f2f2f2;
-        border-radius: 10px ;
+        border: none;
+        border-bottom: 1px solid #f2f2f2;
+        border-radius: 0;
+        color: #F2F2F2;
+        font-weight: 500px;
+        background-color: #0103265d;
+    }
+
+    .heroTexto h1 {
+        font-size: 1.5em;
+    }
+
+    .heroTexto p {
+        font-size: .8em;
+    }
+
+    .containerPrincipal{
+        padding: 10px 15px 0px 15px;
+    }
+
+    .campo {
+        display: flex;
+        width: 80%;
+    }
+
+    option {
+        text-align: center;
     }
 
     .formulario {
+        display: flex;
         padding: 15px;
         width: 90%;
+        text-align: center;
     }
 
     #planSeleccionado {
-        margin-top: 20px;
+        margin: 5px 0;
         align-self: auto;
     }
+
+    .planImg {
+        order: 1;
+        margin: 15px 0 0 0;
+        width: 70%;
+        height: auto;
+    }
+
+    footer {
+        margin-top: 15px;
+    }
+
 }
     
